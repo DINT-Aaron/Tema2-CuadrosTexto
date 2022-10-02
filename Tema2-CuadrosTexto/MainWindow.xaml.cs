@@ -27,7 +27,42 @@ namespace Tema2_CuadrosTexto
 
         private void TextBox_KeyUp(object sender, KeyEventArgs e)
         {
+            if (e.Key == Key.F1 && (sender as TextBox).Tag.Equals("Nombre"))
+            {
+                if (ayudaNombreTextBlock.Visibility == Visibility.Visible)
+                {
+                    ayudaNombreTextBlock.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    ayudaNombreTextBlock.Visibility = Visibility.Visible;
 
+                }
+            }
+            else if(e.Key == Key.F1 && (sender as TextBox).Tag.Equals("Apellido"))
+            {
+                if (ayudaApellidoTextBlock.Visibility == Visibility.Visible)
+                {
+                    ayudaApellidoTextBlock.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    ayudaApellidoTextBlock.Visibility = Visibility.Visible;
+
+                }
+            }
+            else if(e.Key == Key.F2 && (sender as TextBox).Tag.Equals("Edad"))
+            {
+                if(int.TryParse((sender as TextBox).Text, out int n))
+                {
+                    comprobarEdadTextBlock.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    comprobarEdadTextBlock.Visibility = Visibility.Visible;
+                }
+            }
+            
         }
     }
 }

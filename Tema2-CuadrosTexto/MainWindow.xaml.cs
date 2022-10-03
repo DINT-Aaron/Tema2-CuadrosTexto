@@ -23,37 +23,33 @@ namespace Tema2_CuadrosTexto
         public MainWindow()
         {
             InitializeComponent();
+            nombreTextBox.Tag = ayudaNombreTextBlock;
+            apellidoTextBox.Tag = ayudaApellidoTextBlock;
         }
 
         private void TextBox_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.F1 && (sender as TextBox).Tag.Equals("Nombre"))
+            if (e.Key == Key.F1)
             {
-                if (ayudaNombreTextBlock.Visibility == Visibility.Visible)
+                TextBlock texto=(TextBlock)(sender as TextBox).Tag;
+                if(texto.Visibility== Visibility.Hidden)
                 {
-                    ayudaNombreTextBlock.Visibility = Visibility.Hidden;
+                    texto.Visibility = Visibility.Visible;
                 }
-                else
-                {
-                    ayudaNombreTextBlock.Visibility = Visibility.Visible;
-
+                else{
+                    texto.Visibility = Visibility.Hidden;
                 }
             }
-            else if(e.Key == Key.F1 && (sender as TextBox).Tag.Equals("Apellido"))
-            {
-                if (ayudaApellidoTextBlock.Visibility == Visibility.Visible)
-                {
-                    ayudaApellidoTextBlock.Visibility = Visibility.Hidden;
-                }
-                else
-                {
-                    ayudaApellidoTextBlock.Visibility = Visibility.Visible;
 
-                }
-            }
-            else if(e.Key == Key.F2 && (sender as TextBox).Tag.Equals("Edad"))
+            
+
+        }
+
+        private void TextBox_KeyUp_1(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.F2)
             {
-                if(int.TryParse((sender as TextBox).Text, out int n))
+                if (int.TryParse((sender as TextBox).Text, out _))
                 {
                     comprobarEdadTextBlock.Visibility = Visibility.Hidden;
                 }
@@ -62,7 +58,6 @@ namespace Tema2_CuadrosTexto
                     comprobarEdadTextBlock.Visibility = Visibility.Visible;
                 }
             }
-            
         }
     }
 }

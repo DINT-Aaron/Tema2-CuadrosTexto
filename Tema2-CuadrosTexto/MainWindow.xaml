@@ -10,9 +10,9 @@
         <TextBlock HorizontalAlignment="Left" Margin="100,77,0,0" TextWrapping="Wrap" Text="Nombre" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="100,160,0,0" TextWrapping="Wrap" Text="Apellido" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="100,236,0,0" TextWrapping="Wrap" Text="Edad" VerticalAlignment="Top"/>
-        <TextBox Tag="Nombre" HorizontalAlignment="Left" Height="23" Margin="100,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="TextBox_KeyUp"/>
-        <TextBox Tag="Apellido" HorizontalAlignment="Left" Height="23" Margin="100,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="TextBox_KeyUp"/>
-        <TextBox Tag="Edad"  HorizontalAlignment="Left" Height="23" Margin="100,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="TextBox_KeyUp"/>
+        <TextBox x:Name="nombreTextBox" HorizontalAlignment="Left" Height="23" Margin="100,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="TextBox_KeyUp"/>
+        <TextBox x:Name="apellidoTextBox" HorizontalAlignment="Left" Height="23" Margin="100,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="TextBox_KeyUp"/>
+        <TextBox Tag="Edad"  HorizontalAlignment="Left" Height="23" Margin="100,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="TextBox_KeyUp_1"/>
         <TextBlock x:Name="ayudaApellidoTextBlock" HorizontalAlignment="Left" Margin="248,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF8D8D8D" Text="Apellido del cliente" Visibility="Hidden"/>
         <TextBlock x:Name="ayudaNombreTextBlock" HorizontalAlignment="Left" Margin="248,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF8D8D8D" Text="Nombre del cliente" Visibility="Hidden"/>
         <TextBlock x:Name="comprobarEdadTextBlock" HorizontalAlignment="Left" Margin="248,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" Text="Edad incorrecta" Visibility="Hidden"/>
